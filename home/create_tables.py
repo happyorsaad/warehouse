@@ -5,7 +5,7 @@ from sql_queries import create_table_queries, drop_table_queries
 
 def drop_tables(cur, conn):
     '''
-    This function drops exisiting tables from the db, whcih was specified in the table list
+    This function drops exisiting tables from the db
     '''
     for query in drop_table_queries:
         cur.execute(query)
@@ -22,9 +22,6 @@ def create_tables(cur, conn):
 
 
 def main():
-    '''
-    This fr=unction uses the params in the config file to access the data store
-    '''
     config = configparser.ConfigParser()
     config.read('dwh.cfg')
 
